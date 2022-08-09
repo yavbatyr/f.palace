@@ -5,3 +5,37 @@
 body{
     background-color: $primary-color-1;
 }
+.header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.header__menu{
+    display: flex;
+}
+
+
+.header__menu-item{
+    position: relative;
+    list-style: none;
+    align-items: center;
+}
+.header__menu-item + .header__menu-item{
+    padding-left: 65px;
+}
+.header__menu-burger svg:nth-child(2){
+    padding-left: 4px;
+}
+.header__menu-burger{
+    display: flex;
+    flex-direction: column;
+}
+.header__menu-burger svg + svg{
+    padding-top: 4px;
+}
+
+.header__food{
+    padding-left: 80px;
+}
