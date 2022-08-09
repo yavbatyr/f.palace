@@ -1,10 +1,26 @@
 body, ul, li{
     margin: 0;
     padding: 0;
+    font-family: "Std book";
 }
 
 .container{
     max-width: 1140px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.btn{
+    width: 243px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color-3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 31px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
 }
