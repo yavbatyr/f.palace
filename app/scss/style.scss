@@ -110,7 +110,7 @@ body{
 
 .about{
     background: linear-gradient(180deg, rgba(255, 148, 1, 0.05), rgba(255, 237, 211, 0));
-    height: 686px;
+    min-height: 686px;
     &__items{
         align-items: center;
         height: 100%;
@@ -118,7 +118,6 @@ body{
     &__wrapper{
         display: flex;
         justify-content: space-between;
-        height: 450px;
         width: 100%;
         transform: translateY(35%);
     }
@@ -146,5 +145,55 @@ body{
     }
     &__btn{
 
+    }
+}
+
+.features{
+    margin-bottom: 120px;
+    position: relative;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__subtitle{
+        margin-bottom: 13px;
+    }
+    &__title{
+        margin-bottom: 50px;
+    }
+    &__items{
+        display: flex;
+    }
+    &__item{
+        text-align: center;
+        max-width: 245px;
+        &-icon{
+            margin: 0 auto;
+            margin-bottom: 25px;
+            margin-top: 18px;
+        }
+        .icon{
+            margin-top: 0;
+        }
+        &-title{
+            margin-bottom: 19px;
+        }
+    }
+    &__item + &__item{
+        padding-left: 120px;
+    }
+
+    &__img{
+        position: absolute;
+    }
+    .fish{
+        top: 0;
+        left: -70px;
+    }
+    .avocado{
+        top: -100px;
+        right: -200px;
+        width: 400px;
     }
 }
