@@ -197,3 +197,97 @@ body{
         width: 400px;
     }
 }
+
+.popular{
+    background: linear-gradient(180deg, rgba(255, 148, 1, 0.05) 0%, rgba(255, 237, 211, 0) 100%);
+    padding-top: 87px;
+    margin-bottom: 26px;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    &__subtitle{
+        margin-bottom: 13px;
+    }
+    &__title{
+        margin-bottom: 73px;
+    }
+    &__items{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 72px;
+        width: 100%;
+    }
+    &__item{
+        width: 354px;
+        height: 362px;
+        background-color: #fff;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 12px 0 12px;
+        border-radius: 8px;
+        &-image{
+            width: 100%;
+            border-radius: 8px;
+            padding-bottom: 30px;
+        }
+        &-info{
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+        }
+        &-elements{
+            display: flex;
+            flex-direction: column;
+            text-align: end;
+            justify-content: space-between;
+        }
+    }
+    &__rating{
+        color: #818181;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    &__price{
+        font-style: italic;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 60px;
+        color: $primary-color-3;
+    }
+    &__item + &__item{
+        margin-left: 54px;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__name{
+        font-weight: 500;
+        font-size: 20px;
+        padding-bottom: 30px
+    }
+    &__item-btn{
+        width: 100px;
+        height: 22px;
+        background: rgba(196, 196, 196, 0.26);
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+        transition: .3s;
+        //text
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 500;
+        color: #696969;
+    }
+    &__item-btn:hover{
+        background: #FF9401;
+        color: #fff;
+    }
+
+}
