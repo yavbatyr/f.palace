@@ -202,6 +202,7 @@ body{
     background: linear-gradient(180deg, rgba(255, 148, 1, 0.05) 0%, rgba(255, 237, 211, 0) 100%);
     padding-top: 87px;
     margin-bottom: 170px;
+    position: relative;
     &__block{
         display: flex;
         flex-direction: column;
@@ -288,6 +289,11 @@ body{
             background: #FF9401;
             color: #fff;
         }
+    }
+    .salad{
+        position: absolute;
+        top: 96px;
+        right: 584px;
     }
 }
 
@@ -414,7 +420,7 @@ body{
     }
     &__mail,
     &__website{
-        color: #3F3232;
+        color: $primary-color-4;
         text-decoration: none;
         padding-left: 30px;
     }
@@ -448,13 +454,23 @@ body{
         flex-direction: column;
     }
     &__list-title{
-        color: #2E2E2E;
+        color: $primary-color-2;
         text-decoration: none;
         padding-bottom: 23px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
     }
     &__list-item{
         text-decoration: none;
-        color: #6A5C5C;
+        color: $primary-color-5;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 30px;
+        transition: .3s;
+    }
+    &__list-item:hover{
+        color: #2E2E2E;
     }
     &__list-item + &__list-item{
         padding-top: 22px;
@@ -462,7 +478,10 @@ body{
     .social{
         text-decoration-line: underline;
         text-transform: capitalize;
-        color: #2E2E2E;
+        color: $primary-color-2;
+    }
+    .social:hover{
+        color: $primary-color-5;
     }
     .ananas{
         position: absolute;
