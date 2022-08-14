@@ -20,12 +20,25 @@ body{
     &__menu{
         display: flex;
     }
-    
+    &__menu-elements,
+    &__menu-list{
+        display: flex;
+        padding-right: 63px;
+    }
     
     &__menu-item{
         position: relative;
         list-style: none;
         align-items: center;
+        text-decoration: none;
+        color: $primary-color-5;
+        font-size: 20px;
+        transition: .3s;
+    }
+
+    &__menu-item:hover{
+        color: $primary-color-3;
+        cursor: pointer;
     }
     &__menu-item + &__menu-item{
         padding-left: 65px;
@@ -36,11 +49,81 @@ body{
     &__menu-burger{
         display: flex;
         flex-direction: column;
+        cursor: pointer;
     }
     &__menu-burger svg + svg{
         padding-top: 4px;
     }
-    
+    &__menu-list{
+        z-index: 2;
+    }
+    &__menu-burger-wrapper{
+        position: absolute;
+        top: 80px;
+        right: 78.5px;
+        transform: translateY(-200px);
+        display: flex;
+        width: 40%;
+        text-align: center;
+        transition: .3s;
+    }
+    &__menu-burger-wrapper--active{
+        transform: translateY(0px);
+    }
+    .menu-burger-link{
+        word-break: normal;
+        font-size: 16px;
+        // display: none;
+    }
+    &__menu-burger-item{
+        transition: .3s;
+        border: none;
+        width: 20px;
+        height: 3px;
+        border-radius: 1.5px;
+        background-color: $primary-color-2;
+        cursor: pointer;
+    }
+    &__menu-burger-item::before{
+        content: '';
+        width: 16px;
+        height: 3px;
+        position: absolute;
+        top: 7px;
+        right: 0;
+        transition: .3s;
+        background-color: $primary-color-2;
+        border-radius: 1.5px;
+    }
+    &__menu-burger-item::after{
+        content: '';
+        width: 20px;
+        height: 3px;
+        position: absolute;
+        top: 15px;
+        right: 0;
+        transition: .3s;
+        background-color: $primary-color-2;
+        border-radius: 1.5px;
+    }
+
+    &__menu-burger-item--active{
+        transform: rotate(-45deg);
+        margin-top: 9px;
+    }
+    &__menu-burger-item--active::before{
+        content: none;
+    }
+    &__menu-burger-item--active::after{
+        transform: rotate(90deg);
+        left: 0px;
+        top: 0px;
+    }
+
+    .menu-burger-item + .menu-burger-item{
+        padding-left: 20px;
+    }
+
     &__food{
         padding-left: 80px;
         padding-top: 53px;
